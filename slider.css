@@ -1,0 +1,206 @@
+#slider {
+	width: 1150px;
+	margin: 0 auto;
+	position: relative;
+	top: -300px;
+}
+#slides {
+	padding: 5px;
+
+	
+}
+.inner {
+	width: 300%;
+	
+}
+.inner:after {
+content: "";
+display: block;
+height: 0;
+clear: both;
+}
+.page   {
+	float: left;
+	width: 33%;
+	margin-left: 10px;
+	box-sizing: border-box;
+	
+}
+
+
+#overflow {
+	overflow: hidden;
+}
+.galery {
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	
+	
+}
+#slider input {
+	display: none;
+}
+#controlers {
+	position: absolute;
+	width: 100%;
+	top: 110px;
+	height: 0;
+}
+
+#controlers label {
+	opacity: 0.3;
+	cursor: pointer;
+	
+}
+#controlers label:hover {
+	opacity: 1;
+	background-color: #c0301c !important;
+}
+
+#slide1:checked ~ #controlers label:nth-child(3),
+#slide2:checked ~ #controlers label:nth-child(1),
+#slide3:checked ~ #controlers label:nth-child(2)
+{
+  display:block;  
+  width: 30px;
+  height: 30px;
+  float: left;
+  background: url(https://i.imgur.com/9lvuHG6.png) 15% 45% rgba(0,0,0, 0.7);
+  
+}
+#slide1:checked ~ #controlers label:nth-child(2),
+#slide2:checked ~ #controlers label:nth-child(3),
+#slide3:checked ~ #controlers label:nth-child(1){
+  display:block;  
+  width: 30px;
+  height: 30px;
+ float: right;
+ background: url(https://i.imgur.com/9lvuHG6.png) 85% 45% rgba(0,0,0, 0.7);
+}
+#slide1:checked ~ #slides .inner { margin-left: -0.2%;} 
+#slide2:checked ~ #slides .inner { margin-left:-100.09%;} 
+#slide3:checked ~ #slides .inner { margin-left:-200%;} 
+
+#slides .inner {
+transition: all 0.8s ease-in-out;
+-webkit-transition: all 0.8s ease-in-out;
+-moz-transition: all 0.8s ease-in-out;
+-ms-transition: all 0.8s ease-in-out;
+-o-transition: all 0.8s ease-in-out;
+}
+
+
+/*фотки*/
+.slide {
+    width: 260px;
+    height: 250px;
+    border: 1px solid #f0eded;
+   float: left;
+   position: relative;
+   	margin-right: 14px;
+   	left: 18px;
+}
+
+.s1 {
+ 
+background: url(https://i.imgur.com/tR369zB.png) 0 10px no-repeat;
+}
+.s2 {
+background: url(https://i.imgur.com/MPemJD9.png) -25px 10px no-repeat;
+}
+.s3 {
+background: url(https://i.imgur.com/dW7ZKoZ.png) 0 15px no-repeat;
+}
+.s4 {
+    background: url(https://i.imgur.com/RB6So0e.png) no-repeat;
+    
+}
+.s5 {
+    
+background: url(https://i.imgur.com/82Z87fr.png) 0 10px no-repeat;
+}
+.s6 {
+background: url(https://i.imgur.com/V6deLkV.png) 0px 10px no-repeat;
+}
+.s7 {
+background: url(https://i.imgur.com/KsXvUYC.png) 0 5px no-repeat;
+}
+.s8 {
+    background: url(https://i.imgur.com/tuTLIar.png) no-repeat 0 10px;
+    
+}
+.sociality {
+    display: none;
+    width: 260px;
+    height: 250px;
+    background: rgba(0,0,0,0.3);
+}
+
+.s1:hover .sociality {
+    display: block;
+    
+}
+.s2:hover .sociality {
+    display: block;
+    
+}
+.s3:hover .sociality {
+    display: block;
+    
+}
+.s4:hover .sociality {
+    display: block;
+    
+}
+.s5:hover .sociality {
+    display: block;
+    
+}
+.s6:hover .sociality {
+    display: block;
+    
+}
+.s7:hover .sociality {
+    display: block;
+    
+}
+.s8:hover .sociality {
+    display: block;
+    
+}
+.social {
+  width: 40px;
+  height: 40px;
+  background: url(http://i.imgur.com/qLDhYB8.png), url();
+  display: inline-block;
+}
+.share {
+	position: relative;
+	top: 200px;
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+.social-fb {
+  background: url(http://i.imgur.com/qLDhYB8.png) 33% 50% ;
+  margin-left: -1px; 
+}
+.social-fb:hover {
+    background: url(http://i.imgur.com/qLDhYB8.png) 33% 50% #c0301c;
+}
+
+.social-tw {
+  background: url(http://i.imgur.com/qLDhYB8.png) 50.7% 52%;
+}
+.social-tw:hover {
+  background: url(http://i.imgur.com/qLDhYB8.png) 50.7% 52% #c0301c;
+}
+.social-g {
+  background: url(http://i.imgur.com/qLDhYB8.png) 70% 50%;
+}
+.social-g:hover {
+  background: url(http://i.imgur.com/qLDhYB8.png) 70% 50% #c0301c;
+}
+
+
