@@ -1,0 +1,150 @@
+#slider {
+width: 70%; 
+margin: 0 auto; 
+position: relative;
+}
+#slides {
+background: #fff;
+padding: 5px;
+}
+.inner {width: 500%;}
+.inner:after {
+	content:'';
+	display: block;
+	height: 0;
+	clear:both;
+	}
+.page {float: left; width: 20%;}
+
+
+#overflow {overflow: hidden;}
+#slider input {display: none;}
+
+#controls {
+position: absolute;
+width:100%;
+top: 120px;
+left: 0;
+height: 50px;
+}
+
+#controls label {
+display: none;
+opacity: 0.3;
+cursor: pointer;
+}
+#controls label:hover {
+opacity: 0.8;
+}
+													/* перелистывание фотографий */	
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(5),
+#slide5:checked ~ #controls label:nth-child(1) {
+/* первые пять значений создадут стрелку справа*/
+
+}
+#slide1:checked ~ #controls label:nth-child(5),
+#slide2:checked ~ #controls label:nth-child(1),
+#slide3:checked ~ #controls label:nth-child(2),
+#slide4:checked ~ #controls label:nth-child(3),
+#slide5:checked ~ #controls label:nth-child(4) {
+/*стрелка слева*/	
+	}
+
+#slide1:checked ~ #slides .inner { margin-left:0; } 
+#slide2:checked ~ #slides .inner { margin-left:-100%;} 
+#slide3:checked ~ #slides .inner { margin-left:-200%;} 
+#slide4:checked ~ #slides .inner { margin-left:-300%;} 
+#slide5:checked ~ #slides .inner { margin-left:-400%;} 
+
+
+#slide1:checked ~ #slides .page1 {opacity: 1; transition: 1s;}
+#slide1:checked ~ #slides .page2  {opacity: 0; transition: 1s; }
+#slide2:checked ~ #slides .page1 {opacity: 0; transition: 1s; }
+#slide2:checked ~ #slides .page2 {opacity: 1; transition: 1s; }
+
+
+/*точки для перелистывания*/
+#active {
+text-align: center;
+margin-bottom: 50px;
+}
+#active label {
+display: inline-block;
+cursor: pointer;
+font-size: 20px;
+margin-right: 20px;
+color: #555555;
+	}
+#active label span:hover {
+color: #c0301c;
+}
+#slide1:checked ~ #active label:nth-child(1),
+#slide2:checked ~ #active label:nth-child(2),
+#slide3:checked ~ #active label:nth-child(3),
+#slide4:checked ~ #active label:nth-child(4),
+#slide5:checked ~ #active label:nth-child(5) { color: #c0301c;}
+
+
+
+
+.table {
+  display: table; 
+  border-collapse: separate; 
+  border-spacing: 20px 20px;
+  height: 100%;
+  width: 100%;
+}
+.row {
+  display: table-row;
+}
+.cell {
+  display: table-cell;
+  position: relative;
+  
+}
+img {
+  width: 100%;
+  vertical-align: bottom;
+  background
+}
+.cell:hover .mask {
+  display: block;
+}
+.mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(192, 48, 28, 0.7);
+  position: absolute;
+  top:0;
+  text-align: center;
+  display: none;
+}
+.mask a {
+  color: #c0301c;
+  text-decoration: none;
+  background: white;
+  padding: 2.5% 6%;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 50px;
+}
+.link {
+  width: 100%;
+  height: 150px;
+  margin: 15% auto;
+  font-size: 50%;
+  line-height: 20px;
+}
+.mask h1 {
+  
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+.mask span {
+  color: white;
+ font-family: "Montserrat", sans-serif;
+}
